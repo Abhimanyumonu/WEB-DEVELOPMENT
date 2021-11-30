@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+:root{
+    --font-size-xl :3rem;
+    --font-size-400 :1rem;
+    --font-size-600 :1.25rem;
+    --font-size-800:2.5rem;
+
+    --primary-clr :rgb(8, 247, 40);
+    --secondary-clr:rgb(36, 235, 10);
+}
+
+@media screen and (max-width:768px) {
+    :root{
+        --font-size-xl :2rem;
+        --font-size-800:2.25rem;
+    }
+    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/*Base Styling*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins",Arial, Helvetica, sans-serif;
+}
+
+
+
+a{
+    text-decoration: none;
+    font-size: var(--font-size-600);
+    font-weight: 400;
+    color: var(--secondary-clr)
+}
+
+
+h1{
+    font-size: xx-large;
+    font-weight: 1000;
+    font-size:var(--font-size-xl);
+    font-stretch:  extra-expanded;
+    margin: 0 0;
+}
+
+
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+
+/*utility classes*/
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+
+/* navigation */
+
+header{
+    height: 100vh;
+    background:url(img/pp2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo h1{
+      
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    color:var(--primary-clr);
+
+   
+}
+.logo img{
+    width: 20%;
+    border: 5px solid rgb(248, 248, 4);
+border-radius: 50px;
+}
+
+
+
+nav{
+    padding: 2% 8%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    list-style-type: none;
+}
+
+nav li{
+    display: inline-block;
+    margin-left: 2.5rem;
+}
+
+nav ul li a:hover{
+    color:var(--primary-clr);
+    transition: .5sec ease-in-out;
+}
+.hamburger{
+    display: none;
+}
+
+.header-content{
+    position: relative;
+    width: 80%;
+    margin: auto;
+    color:var(--secondary-clr);
+}
+
+.header-content>a{
+    color: rgb(11, 241, 22);
+    margin: 10px 0;
+    display: inline-block;
+    padding: 12px 10px;
+    font-size: var(--font-size-600);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color:var(--primary-clr);
+
+}
+
+.header-content>a:hover{
+    background-color:rgba(0, 0, 0, 0.9);
+    color: var(--primary-clr);
+}
+
+
+
+.services>.row{
+    justify-content: space-about;
+}
+
+.services>.row .left,.right,.center{
+    padding: 0 1.6rem;
+    flex-basis: 30%;
+}
+
+.services{
+    background:url(img/c1.jpg);
+    background-color:rgba(242, 247, 243, 0.9);
+    padding: 1rem;
+}
+
+.services>.container{
+    width: 80%;
+    margin-inline:auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services>.container>.services{
+    background-color: var(--secondary-clr);
+    border: 10px solid var(--primary-clr);
+    width: 30%;
+    margin: 18px;
+   
+}
+
+
+
+.offer{
+    background-color:rgba(85, 81, 81, 0.9);
+    padding: 1rem;
+}
+
+.offer>.container{
+    width: 80%;
+    margin-inline:auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.offer>.container>.offer{
+    background-color: var(--secondary-clr);
+    border: 10px solid var(--primary-clr);
+    width: 30%;
+    margin: 18px;
+   
+}
+
+.offer p{
+    text-align: center;}
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    gap:1rem;
+}
+
+input[type=text],input[type=email],textarea{
+    padding: 12px 20px;
+    border: 1px solid rgb(245, 221, 4);
+}
+input[type=submit]{
+    padding: 14px 20px;
+    border: 1px solid rgb(229, 245, 4);
+    color: #222;
+    background-color:var(--primary-clr);
+    font-size: var(--font-size-600);
+    border-radius: 5px;
+}
+input[type=submit]:hover{
+    background-color: rgb(46, 41, 41);
+    color:var(--secondary-clr);
+}
+
+
+
+/*Media Queries*/
+
+@media screen and (max-width:768px){
+    nav{
+        flex-direction: column;
+        position: relative;
+    }
+    .hamburger{
+        display: block;
+        position:absolute;
+        top: 16px;
+        right: 16px;
+        cursor: pointer;
+    }
+    nav ul{
+        background-color:var(--secondary-clr);
+        display: none;
+    }
+    .showmenu{
+        display: block;
+    }
+    nav ul li{
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+    nav ul li a{
+        color: #222;
+        display: block;
+        padding: 2% 2%;
+
+    }
+    nav ul li a:hover{
+        background-color: rgb(46, 41, 41);
+    }
+    .services>.row{
+        flex-direction: column;
+    }
+    .offer>.container{
+        width: 100%;
+    }
+    .offer>.container>.offer{
+        width: 100%;
+        margin: 5px;
+    }
+    
+    
+
+}
